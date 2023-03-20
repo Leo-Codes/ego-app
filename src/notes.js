@@ -157,7 +157,8 @@ function renderView(note_id){
         noteTitle.innerHTML = filteredNote[0].title;
         noteView.innerHTML = filteredNote[0].html;
     }else{
-        noteTitle.innerHTML = "Adicione uma nova Nota para Começar"
+        noteTitle.innerHTML = "Adicione uma nova Nota para Começar";
+        noteView.innerHTML = "";
     }
     // console.log('html>> ' + filteredNote[0].html);
 
@@ -166,16 +167,18 @@ function renderView(note_id){
 function renderAside(){
     //limpa o elemento aside para não duplicar a lista
     notes_list.innerHTML ='';
-
-    notes_list.innerHTML += `
-    <div id="Tarefa EBAC" class="default-note">
-        <div class="note-list-title">
-            <h4>Tarefa EBAC</h4>
-            <button class="aside-delete-button">X</button>
+    if(dataList.length==0){
+        notes_list.innerHTML += `
+        <div id="Tarefa EBAC" class="default-note">
+            <div class="note-list-title">
+                <h4>Tarefa EBAC</h4>
+                <button class="aside-delete-button">X</button>
+            </div>
+            <p class="note-description">TO-DO LIST EBAC:- Implementar botão 'delete' no seletor lateral de n...</p>
         </div>
-        <p class="note-description">TO-DO LIST EBAC:- Implementar botão 'delete' no seletor lateral de n...</p>
-    </div>
-    `;    
+        `;    
+    
+    }
 
     dataList.map((item,index)=>{
         notes_list.innerHTML += `
