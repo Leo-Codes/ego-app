@@ -160,8 +160,8 @@ section{
     position: relative;
     top: -4rem;
     width: 25rem;
-    opacity: 100%;
-    filter:blur(1px);
+    opacity: 75%;
+    filter:blur(2px);
 
 }   
 
