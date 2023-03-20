@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Mulish:wght@400;500&family=Poppins&family=Roboto&family=Tilt+Warp&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bb79c4e9f5.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./styles/notes.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/text-editor.css">
+    <title>Ego</title>
+</head>
+<body>
+    <aside>
+        <div class="logo">
+            <img src="./images/icons/process.png" alt="">
+            <h1 class="title">EGO</h1>
+        </div>
+        <div class="notes-list">
+            <form action="">
+                <input id="add-input" type="text" placeholder="Adicione uma tarefa ou anotação">
+                <button id="add-button" class="insert_note" type="button">+</button>
+            </form>
+            <div class="underline"></div>
+            <div id="notes-list-container">
+                <div class="note">
+                    <div class="note-list-title">
+                        <h4>Tarefa EBAC</h4>
+                        <button class="aside-delete-button">X</button>
+                    </div>
+                    <p class="note-description">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                </div>
+
+            </div>
+
+
+            
+        </div>
+    </aside>
+    <div class="content">
+        <div class="title-div">
+            <div class="text">
+                <i class="fa-solid fa-check-to-slot icon"></i>
+                <h1 class="view-title" id="view-title">Tarefa EBAC</h1>
+            </div>
+            <div class="title-buttons">
+                <button id="save-button">Salvar</button>
+                <button id="delete-button">Deletar</button>
+            </div>
+        </div>
+        <div class="underline"></div>
+        <div class="text-editor">
+            <div class="editButtons">
+
+                <span title="STYLES">
+                  <button data-edit="bold"><b>B</b></button>
+                  <button data-edit="italic"><i>I</i></button>
+                  <button data-edit="underline"><u>U</u></button>
+                  <button data-edit="strikeThrough"><s>S</s></button>
+                </span>
+                
+                <span title="TEXT FORMAT">
+                  <button data-edit="formatBlock:p">P</button>
+                  <button data-edit="formatBlock:H1">H1</button>
+                  <button data-edit="formatBlock:H2">H2</button>
+                  <button data-edit="formatBlock:H3">H3</button>
+                </span>
+              
+                <span title="FONT SIZE">
+                  <button data-edit="fontSize:1">&#8613;s</button>
+                  <button data-edit="fontSize:3">&#8613;M</button>
+                  <button data-edit="fontSize:5">&#8613;L</button>
+                </span>
+              
+                <span title="LISTS">
+                  <button data-edit="insertUnorderedList">UL</button>
+                  <button data-edit="insertOrderedList">OL</button>
+                </span>
+              
+                <span title="ALIGNMENT">
+                  <button data-edit="justifyLeft">&#8676;</button>
+                  <button data-edit="justifyCenter">&#8596;</button>
+                  <button data-edit="justifyRight">&#8677;</button>
+                </span>
+              
+                <span title="CLEAR FORMATTING">
+                  <button data-edit="removeFormat">&times;</button>
+                </span>
+              
+              </div>              
+        </div>
+        <div class="note-view" id="note-view" contenteditable="true"> 
+            <h1>TO-DO LIST EBAC:</h1>        
+            <br>
+            <p>- Implementar botão 'delete' no seletor lateral de notas. <br></p>
+            <br>
+            <p>- Corrigir função que renderiza a lista de notas para que sempre insira um modelo de nota Default (this). <br></p>
+            <br>
+            <p>- Corrigir responsividade. <br></p>
+            <br>
+            <p>- Hospedar o projeto no site da Vercel. <br></p>
+            <br>
+            <p>- Enviar link para avaliação na Plataforma da EBAC.</p>
+        </div>
+    </div>
+    
+</body>
+<script src="./src/notes.js"></script>
+<script src="./src/text-editor.js"></script>
+</html>

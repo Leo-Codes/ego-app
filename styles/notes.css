@@ -1,0 +1,255 @@
+@import url('./globalStyle.css');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display:flex;
+    flex-direction: row;
+    max-width: 100vw;
+    height: 100vh;
+
+}
+
+aside{
+    padding: 1rem 0.5rem;
+    width: 35%;
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(43, 43, 43);
+    border-radius: 0px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--default-gradient);
+    border-radius: 10px;
+  }
+
+aside .logo{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+aside .logo img{
+    height: 50px;
+    margin: 0 0.6rem;
+}
+
+form input{
+    background-color: var(--input-dark);
+    border:none;
+    height: 2rem;
+    width: 15rem;
+    font-family: 'Poppins';
+    padding: 0.2rem 0.8rem;
+    outline: none;
+    color: white;
+}
+
+form input::placeholder{
+    font-family: 'Poppins';
+    color:rgba(255, 255, 255, 0.623);
+    font-size: smaller;
+}
+
+.insert_note{
+    font-family: 'Mulish';
+    height: 2rem;
+    width: 2.5rem;
+    font-weight: bold;
+    font-size: larger;
+
+    border:none;
+    border-radius: 4px;
+    margin-left: 0.3rem;
+    color:white;
+    background:linear-gradient(45deg, rgb(86, 1, 165),rgb(131, 43, 172));
+}
+
+.notes-list form{
+    display: flex;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+
+.underline{
+    background:var(--underline);
+    height: 0.1rem;
+    width: 100%;
+    margin-bottom: 0.7rem;
+    border-radius: 8px;
+}
+
+.notes-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.4rem;
+    background: var(--dark-background);
+    border-radius: 4px;
+}
+
+.note-list-title{
+    /* color:rgb(119, 0, 255); */
+    /* padding:0.5rem; */
+    /* background-color: var(--dark-background); */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    color:rgb(236, 236, 236);
+    font-family: 'Poppins';
+    font-weight: normal;
+    margin-bottom: 0.45rem;
+}
+
+.note-description{
+    color:rgba(126, 126, 126, 0.788);
+    font-size: small;
+}
+
+.aside-delete-button{
+    width: 1rem;
+    height: 1rem;
+    background: none;
+    border: 1px solid red;
+    outline: none;
+    color: red;
+    transition: 500ms;
+}
+.aside-delete-button:hover{
+    /* transform: scale(1); */
+    transform: scale(2);
+    background: red;
+    border: 1px solid red;
+    outline: none;
+    color: white;
+    cursor: grab;
+    
+}
+
+.note, .default-note{
+    width: 95%;
+    background:var(--dark-secondary-color);
+    padding: 0.65rem;
+    margin-bottom: 1rem;
+}
+
+.note:hover, .default-note:hover{
+    cursor:pointer;
+    background-color: var(--dark-secondary-color-hover);
+}
+
+.content{
+    /* color:white; */
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1.5rem;
+    margin: 2rem 0 0 0;   
+    min-height: fit-content;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+    background-color: var(--dark-background);
+
+    border-radius: 8px;
+
+}
+.view-title{
+    color:rgb(119, 0, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.task-list{
+    display: flex;
+    flex-direction: column;
+    padding:1.5rem;
+    gap: 1.5rem;
+}
+
+.task{
+    display:flex;
+    flex-direction: row;
+    color:white;
+    font-family: 'Roboto';
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.note-view {
+    display: flex;
+    flex-direction: column;
+    padding: 0.1rem;
+    background:none;
+    outline: none;
+    /* border: 3px solid rgba(255, 255, 255, 0.009); */
+    resize: none;
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins";
+    font-size:small;
+    color:white;
+    overflow: auto;
+}
+
+.content .title-div{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+    background-color: var(--dark-secondary-color);
+    padding: 1rem;
+    justify-content: space-between;
+    border: rgba(119, 0, 255, 0.452) 1px dashed;
+}
+
+.content .title-div .text{
+    display: flex;
+    align-items: center;
+}
+
+.content .title-div .text .icon{
+    color:rgb(110, 5, 230);
+    font-size: large;
+    margin-right: 1.5rem;
+    /* background: var(--dark-background); */
+    /* padding: 0.5rem 2rem; */
+}
+
+.content .title-buttons{
+    display:flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.content .title-buttons button{
+    font-family: 'Poppins';
+    transform: scale(1.2);
+    color:white;
+    height: 2rem;
+    width: 5rem;
+    background: var(--default-gradient);
+    border:none;
+    outline: none;
+    
+}
+
+.title-buttons #delete-button{
+    background: rgb(241, 33, 33);
+}
+
+
+
